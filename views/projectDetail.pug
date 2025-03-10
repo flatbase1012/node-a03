@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  .project-detail
+    h1 #{project.title}
+    br
+    img(src=project.screenshot, alt=`${project.title} screenshot`)
+    h3 Tech Stack
+    ul
+      each tech in project.tech
+        li #{tech}
+    p #{project.description}

@@ -1,0 +1,12 @@
+extends layout.pug
+
+block content
+  h1 My Projects
+  br
+  .search-container
+    form(action="/projects/search", method="get")
+      input(type="text", name="query", placeholder="Search projects...")
+      button(type="submit") Search
+  .projects-container
+    each project in projects
+      include partials/projectCard.pug

@@ -1,0 +1,8 @@
+div.project-card
+  h2 #{project.title}
+  p #{project.summary}
+  ul
+    each tech in project.tech
+      li #{tech}
+  img(src=project.screenshot, alt=`${project.title} screenshot`)
+  a(href=`/projects/${project.id}`) View Details

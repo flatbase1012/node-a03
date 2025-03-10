@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  h1 Search Results
+  br
+  if searchTerm
+    p Results for "#{searchTerm}"
+    if results.length
+      .projects-container
+        each project in results
+          include partials/projectCard.pug
+    else
+      p No projects found for "#{searchTerm}".
+  else
+    p Please enter a search term.

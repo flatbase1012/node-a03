@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  h1 Contact Me
+  br
+  form(action="/contact", method="post")
+    input(type="text", name="name", placeholder="Name", required)
+    br
+    textarea(name="message", placeholder="Message", required)
+    br
+    button(type="submit") Submit
