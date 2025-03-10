@@ -3,6 +3,14 @@ node-a03
 
 ## instruction
 
+### install packages
+
+```
+npm install mongodb
+npm install dotenv
+npm install mongoose
+```
+
 ### check your mongosh is installed
 
 ```
