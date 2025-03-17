@@ -19,6 +19,12 @@ mongosh --version
 
 ### connect to your mongoDB
 
+- mongo URI
+
+```
+MONGO_URI=mongodb+srv://flatbase1012:hB1On4p1tavw37Fi@yoshi.kk0el.mongodb.net/A03?retryWrites=true&w=majority&appName=Yoshi
+```
+
 ```
 mongosh "mongodb+srv://DBUSER:PASSWORD@xxxxx.xxxxx.mongodb.net/DBNAME?retryWrites=true&w=majority&appName=ANY"
 ```
