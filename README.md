@@ -9,6 +9,7 @@ node-a03
 npm install mongodb
 npm install dotenv
 npm install mongoose
+npm install multer
 ```
 
 ### check your mongosh is installed
