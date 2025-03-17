@@ -1,0 +1,31 @@
+extends layout.pug
+
+block content
+  h1 #{title}
+  form(action=formAction, method="post", enctype="multipart/form-data")
+    label(for="title") Title:
+    input(type="text", name="title", id="title", required, value=project.title || '')
+    br
+
+    label(for="summary") Summary:
+    input(type="text", name="summary", id="summary", required, value=project.summary || '')
+    br
+
+    label(for="description") Description:
+    textarea(name="description", id="description", required)= project.description || ''
+    br
+
+    label(for="tech") Tech Stack (comma separated):
+    input(type="text", name="tech", id="tech", value= project.tech ? project.tech.join(', ') : '')
+    br
+
+    label(for="screenshot") Screenshot:
+    input(type="file", name="screenshot", id="screenshot")
+    br
+
+    if project.screenshot
+      p Current screenshot:
+      img(src=project.screenshot, alt="Current screenshot", width="200")
+      br
+
+    button(type="submit") #{submitButtonText}
