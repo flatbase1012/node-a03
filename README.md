@@ -5,11 +5,17 @@ node-a03
 
 ### install packages
 
+*don't need if you've set up package.json
 ```
 npm install mongodb
 npm install dotenv
 npm install mongoose
 npm install multer
+```
+
+*get the dependencies
+```
+npm install
 ```
 
 ### check your mongosh is installed
