@@ -64,3 +64,16 @@ we can reference contact messages like this.
 ```
 db.contactmessages.find().pretty()
 ```
+
+### Change User role
+
+```
+Atlas atlas-ht7evp-shard-0 [primary] A03> db.users.updateOne({ username: "yoshi" }, { $set: { roles: ["Admin"] } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
