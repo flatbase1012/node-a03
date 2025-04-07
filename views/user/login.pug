@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block content
+  .form-container
+    h1 Login
+    form(action="/login", method="post")
+      .form-group
+        label(for="username") Username
+        input(type="text", name="username", id="username", required)
+      .form-group
+        label(for="password") Password
+        input(type="password", name="password", id="password", required)
+      button(type="submit") Log In
+    if errorMessage
+      p.error-message #{errorMessage}

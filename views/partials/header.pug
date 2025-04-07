@@ -1,11 +1,16 @@
 header
   h1 My Node.js Portfolio
-  br
-  nav
-    a(href="/") Home
-    |  
-    a(href="/about") About
-    |  
-    a(href="/projects") Projects
-    |  
-    a(href="/contact") Contact
+  .nav-row
+    nav
+      a(href="/") Home
+      a(href="/about") About
+      a(href="/projects") Projects
+      a(href="/contact") Contact
+    if isAuthenticated
+      .user-right
+        p Logged in as #{user.username} (#{user.roles})
+        a.btn-logout(href="/logout") Logout
+    else
+      .user-right
+        a.btn-login(href="/login") Login
+        a.btn-register(href="/register") Register
