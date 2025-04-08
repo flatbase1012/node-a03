@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: 'yourSecretKey',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }));
